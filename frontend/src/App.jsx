@@ -1,3 +1,4 @@
+// App.jsx
 import React from 'react'
 import NavBar from './components/Navbar/NavBar.jsx'
 
