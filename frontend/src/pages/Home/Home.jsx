@@ -1,8 +1,15 @@
+// Home.jsx
 import React from 'react'
 import './Home.css'
+import Header from '../../components/Header/Header'
+import ExploreMenu from '../../components/ExploreMenu/ExploreMenu'
+
 const Home = () => {
   return (
-    <div>Home</div>
+    <div>
+      <Header/>
+      <ExploreMenu/>
+    </div>
   )
 }
 
