@@ -4,13 +4,13 @@ import './NavBar.css'
 import { assets } from '../../assets/assets.js'
 import { Link } from 'react-router-dom'
 
-const NavBar = () => {
+const NavBar = ({setShowLogin}) => {
 
   const [menu, setMenu] = useState("home")
 
   return (
     <div className='navbar'>
-      <img src={assets.logo} alt="" className='logo'/>
+      <Link to='/'><img src={assets.logo} alt="" className='logo'/></Link>
 
       <ul className='navbar-menu'>
         <li>
@@ -57,10 +57,10 @@ const NavBar = () => {
       <div className="navbar-right">
         <img src={assets.search_icon} alt="" />
         <div className='navbar-search-icon'>
-          <img src={assets.basket_icon} alt="" />
+          <Link to='/cart'><img src={assets.basket_icon} alt="" /></Link>
           <div className='dot'></div>
         </div>
-        <button>Sign-In</button>
+        <button onClick={()=>setShowLogin(true)} >Sign-In</button>
       </div>
     </div>
   )
